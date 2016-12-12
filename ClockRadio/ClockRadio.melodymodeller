@@ -3,7 +3,7 @@
 <!--Capella_Version_1.0.0-->
 <org.polarsys.capella.core.data.capellamodeller:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:libraries="http://www.polarsys.org/capella/common/libraries/1.0.0"
-    xmlns:org.polarsys.capella.core.data.capellacommon="http://www.polarsys.org/capella/core/common/1.0.0"
+    xmlns:mass="http://www.polarsys.org/capella/mass" xmlns:org.polarsys.capella.core.data.capellacommon="http://www.polarsys.org/capella/core/common/1.0.0"
     xmlns:org.polarsys.capella.core.data.capellacore="http://www.polarsys.org/capella/core/core/1.0.0"
     xmlns:org.polarsys.capella.core.data.capellamodeller="http://www.polarsys.org/capella/core/modeller/1.0.0"
     xmlns:org.polarsys.capella.core.data.cs="http://www.polarsys.org/capella/core/cs/1.0.0"
@@ -17,7 +17,7 @@
     xmlns:org.polarsys.capella.core.data.la="http://www.polarsys.org/capella/core/la/1.0.0"
     xmlns:org.polarsys.capella.core.data.oa="http://www.polarsys.org/capella/core/oa/1.0.0"
     xmlns:org.polarsys.capella.core.data.pa="http://www.polarsys.org/capella/core/pa/1.0.0"
-    id="0c2d85a2-0ff0-42c4-aeac-94f00cee0f72"
+    xmlns:price="http://www.polarsys.org/capella/price" id="0c2d85a2-0ff0-42c4-aeac-94f00cee0f72"
     name="ClockRadio">
   <ownedExtensions xsi:type="libraries:ModelInformation" id="2cde1f2b-906e-4803-9b31-404db4ec1681"/>
   <ownedEnumerationPropertyTypes xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyType"
@@ -4051,11 +4051,18 @@
         <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="beecd0da-060f-4472-81e7-ed4dc8f3ac15"
             name="Alarm Manager" abstractType="#1059beb8-8e84-4aa7-8cf9-8562a67fbe1e"/>
         <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="b7e9dd8f-2d01-4906-8423-bc25dbb5f7b0"
-            name="Clock" abstractType="#223f1b10-d892-4416-9076-b0a0a749d091"/>
+            name="Clock" abstractType="#223f1b10-d892-4416-9076-b0a0a749d091">
+          <ownedExtensions xsi:type="price:PartPrice" id="_gj_foMCwEeagz_md5KqELA"/>
+          <ownedExtensions xsi:type="mass:PartMass" id="_0Nw7kMCwEeagz_md5KqELA"/>
+        </ownedFeatures>
         <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="3d32fc20-c731-40f2-ac3b-aa0580d69b56"
             name="Radio HMI" abstractType="#d099203c-e86b-4b3d-873d-0dff0394fe9d"/>
         <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="685ad968-e9b0-4746-9ad9-f7b5d20c5c80"
             name="Voice HMI" abstractType="#3d497147-37c1-46cb-98b6-c2ebf5c863e4"/>
+        <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="6b0550fa-898a-437c-a018-a0140b31208d"
+            name="Clock Radio HMI" abstractType="#d9831d9c-1652-4158-8eec-ae7715238bed"/>
+        <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="bc700026-7780-4226-bf39-41b857ec930f"
+            name="Alarm Manager" abstractType="#1059beb8-8e84-4aa7-8cf9-8562a67fbe1e"/>
         <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
             id="d9831d9c-1652-4158-8eec-ae7715238bed" name="Clock Radio HMI" nature="BEHAVIOR">
           <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
